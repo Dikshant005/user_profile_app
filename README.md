@@ -1,16 +1,36 @@
-# user_profile_app
+# User Profiles App
 
-A new Flutter project.
+A Flutter application that displays user profiles from the Random User API with clean architecture implementation.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Clean Architecture with MVVM pattern
+- State management using Riverpod
+- Grid layout for user profiles
+- Detailed profile view with hero animations
+- Like/unlike functionality with state synchronization
+- Pull-to-refresh
+- Country filtering
+- Responsive design
+- Loading and error states
+- Cached network images
 
-A few resources to get you started if this is your first Flutter project:
+## Architecture
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The app follows clean architecture principles with three main layers:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Data Layer
+- **Models**: Data transfer objects
+- **Data Sources**: API calls and local storage
+- **Repositories**: Implementation of domain repositories
+
+### Domain Layer
+- **Entities**: Business objects
+- **Repositories**: Abstract repository interfaces
+- **Use Cases**: Business logic (integrated with repositories)
+
+### Presentation Layer
+- **Providers**: State management with Riverpod
+- **Screens**: UI pages
+- **Widgets**: Reusable UI components
+
